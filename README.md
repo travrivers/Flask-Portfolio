@@ -1,3 +1,2 @@
-# this_is_my_project
+Flaskin'
 Flask PARTY TIME!!!
-This is stuff I am updating. Here it goes. 
