@@ -1,0 +1,33 @@
+body {
+
+    background:rgb(255, 38, 49);
+    font-family: 'Noto Serif', serif;
+       
+    
+}
+h1 {
+    color: black;
+    font-family: fantasy;
+}
+
+#intro {
+    color: 
+    text-shadow:  0px 4px 3px rgba(255, 255, 255, 0.514);
+                  0px 8px 13px rgba(107, 105, 105, 0.548);
+				  0px 18px 23px rgba(0,0,0,0.1);
+}
+#Travbar {
+    color: red;
+}
+
+#content {
+		text-shadow: 0px 4px 3px rgba(255, 255, 255, 0.514);
+				 0px 8px 13px rgba(107, 105, 105, 0.548);
+				 0px 18px 23px rgba(0,0,0,0.1);
+
+}
+hr {
+	width: 400px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid #f8f8f8
+}
