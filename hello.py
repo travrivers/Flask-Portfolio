@@ -21,4 +21,8 @@ def dogs():
 def games():
     return render_template('games.html')
 
+@app.route('/colorguesser')
+def colorguesser():
+    return render_template('colorguesser.html')
+
 
