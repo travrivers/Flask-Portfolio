@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="container-fluid pt-5">
+  <div class="card-deck">
+
+        <div class="card text-white text-center bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Color Guessing Game</h5>
+              <p class="card-text">A game where you guess a color based upon RGB values</p>
+              <a href="/colorguesser" class="btn btn-danger align-text-bottom">Go</a>
+            </div>
+          </div>
+    
+        <div class="card text-white text-center bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Circles</h5>
+              <p class="card-text">A game that turns your keyboard into an instrument, heavily inspired by Patatap</p>
+              <a href="/circles" class="btn btn-danger align-text-bottom">Go</a>
+            </div>
+          </div>
+
+        <div class="card text-white text-center bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Fancy To-Do List</h5>
+              <p class="card-text">It's a to-do list...but fancy. </p>
+              <a href="/fancytodo" class="btn btn-danger">Go</a>
+            </div>
+          </div>
+  </div>
+    
+</div>
+
+
+
+
+{% endblock %}

@@ -1,12 +1,14 @@
 body {
 
-    background:rgb(255, 38, 49);
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e74c3c, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e74c3c, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-family: 'Noto Serif', serif;
        
     
 }
 h1 {
-    color: black;
+    color: white;
     font-family: fantasy;
 }
 
@@ -31,12 +33,9 @@ hr {
 	border-top: 1px solid #f8f8f8;
 	border-bottom: 1px solid #f8f8f8
 }
-<<<<<<< HEAD
 
 
 .gamelink {
     color: steelBlue;
     font-weight: 900;
 }
-=======
->>>>>>> 62031f91894abd4b61c2f334fb2a93bec0acd511

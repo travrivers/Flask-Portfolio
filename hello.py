@@ -17,15 +17,20 @@ def aboutme():
 def dogs():
     return render_template('dogs.html')
 
-@app.route('/games')
+@app.route('/apps')
 def games():
-    return render_template('games.html')
+    return render_template('apps.html')
 
-<<<<<<< HEAD
 @app.route('/colorguesser')
 def colorguesser():
     return render_template('colorguesser.html')
 
-=======
->>>>>>> 62031f91894abd4b61c2f334fb2a93bec0acd511
+@app.route('/circles')
+def circles():
+    return render_template('circles.html')
+
+@app.route('/fancytodo')
+def fancytodo():
+    return render_template('fancytodo.html')
+
 
