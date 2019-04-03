@@ -7,6 +7,10 @@
         background-color: red;
         color: black;
     }
+
+    body {
+        background: linear-gradient(to right, #e74c3c, #000000);
+    }
 </style>
 <nav id="Travbar" class="navbar navbar-dark bg-dark navbar-expand-md py-0 fixed-top">
     <a class="navbar-brand" href="/">Travbar</a>
@@ -38,20 +42,21 @@
     </div>
 </nav>
 
+<section class="poop">
+    <div class="container-fluid pt-5">
+        <div class="card-deck">
 
-<div class="container-fluid pt-5 poop">
-    <div class="card-deck">
-
-        <div class="card text-white text-center bg-dark mb-3" style="max-width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">DogParker</h5>
-                <p class="card-text">A full stack (MongoDB, Express, Node.js) application. Basically, it's Yelp for
-                    Dog Parks</p>
-                <a href="http://dogparker.herokuapp.com/" class="btn btn-danger">Go</a>
+            <div class="card text-white text-center bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">DogParker</h5>
+                    <p class="card-text">A full stack (MongoDB, Express, Node.js) application. Basically, it's Yelp for
+                        Dog Parks</p>
+                    <a href="http://dogparker.herokuapp.com/" class="btn btn-danger">Go</a>
+                </div>
             </div>
+
+
         </div>
+</section>
 
-
-    </div>
-
-    {% endblock %}
+{% endblock %}
