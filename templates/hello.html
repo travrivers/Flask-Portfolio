@@ -4,7 +4,7 @@
 <style>
     .parallax {
         background-image: url("https://images.unsplash.com/photo-1527027288501-ae71c0e674c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
-        height: 1000px;
+        height: 750px;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -36,6 +36,7 @@
         max-width: 2.5rem;
         width: 100%;
         height: auto;
+        margin-bottom: 10px;
     }
 
     .scroll {
@@ -80,17 +81,17 @@
     }
 </style>
 <script>
-jQuery(document).ready(function($){
-	
-	$('a.scroll-link').click(function(e){
-		e.preventDefault();
-		$id = $(this).attr('href');
-		$('body,html').animate({
-			scrollTop: $($id).offset().top -20
-		}, 750);
-	});
-	
-});
+    jQuery(document).ready(function ($) {
+
+        $('a.scroll-link').click(function (e) {
+            e.preventDefault();
+            $id = $(this).attr('href');
+            $('body,html').animate({
+                scrollTop: $($id).offset().top - 20
+            }, 750);
+        });
+
+    });
 </script>
 <nav id="Travbar" class="navbar navbar-dark bg-dark navbar-expand-md py-0 fixed-top">
     <a class="navbar-brand" href="/">Travbar</a>
@@ -123,8 +124,8 @@ jQuery(document).ready(function($){
 </nav>
 
 
-<section class="container-fluid px-0 poop">
-    <a class="scroll-link" href="#content">
+<section class="container-fluid poop">
+    <a class="scroll-link mb-5" href="#content">
         <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
             <g fill="none" fill-rule="evenodd">
                 <rect width="70" height="118" x="1.5" y="1.5" stroke="#FFF" stroke-width="3" rx="36" />
@@ -133,6 +134,9 @@ jQuery(document).ready(function($){
         </svg>
     </a>
     <div class="parallax"></div>
+</section>
+
+<section class="container-fluid poop">
     <div class="row align-items-center">
         <div class="col-lg-6 col-sm-12">
             <div class="text-center text-white d-lg-block mx-5 mt-5">
@@ -140,7 +144,8 @@ jQuery(document).ready(function($){
                 <h2>Welcome to my site! My name is Travis and I put this together to serve as my portfolio. I have been
                     learning and using
                     Python, HTML, CSS, JavaScript and a whole host of libraries and frameworks including Flask, Express
-                    JS, JQuery, Angular, MongoDB and Bootstrap.
+                    JS, JQuery, Angular, MongoDB and Bootstrap. While you're here, please check out some of the other
+                    web applications and programs I've made!
                 </h2>
             </div>
         </div>
