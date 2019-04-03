@@ -1,60 +1,193 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-    <section class="container-fluid px-0">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-sm-12">
-                <div class="text-white text-center d-lg-block mt-5">
-                    <h1 class="text-white">About Me</h1>
-                    <h2>My name is Travis Rivers and I live in Denver with my fianc&eacutee and two pups.  We moved here 3 1/2 years ago from Rochester, NY after just one visit 
-                        because we fell in love with Colorado. I've spent my career working in talent acquistion, primarily for healthcare entities.  Recently, I decided to learn how to program and I've been surprised by how much I enjoy it.  
-                    I've always embraced things that are challenging and I love learning.  With programming, I get both of those things. </h2>
-                    
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-12 mt-5">
-                <img class="img-fluid " src="/static/profesh.jfif" alt="">
+<style>
+    .parallax {
+        background-image: url("/static/stars.jpg");
+        height: 1000px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    img {
+        opacity: 0.5;
+    }
+
+    img:hover {
+        opacity: 1.0;
+        border: 5px solid steelblue;
+    }
+
+    .poop {
+        padding: 50px;
+        background: linear-gradient(to right, #e74c3c, #000000);
+    }
+
+
+
+    .navlinks:hover {
+        background-color: red;
+        color: black;
+    }
+
+    .mouse {
+        max-width: 2.5rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .scroll {
+        animation-name: scroll;
+        animation-duration: 1.5s;
+        animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
+        animation-iteration-count: infinite;
+        transform-origin: 50% 20.5px;
+        will-change: transform, opacity;
+        opacity: 1;
+    }
+
+    .scroll-link {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @keyframes scroll {
+
+        0%,
+        20% {
+            transform: translateY(0) scaleY(1);
+        }
+
+        100% {
+            transform: translateY(36px) scaleY(2);
+            opacity: 0;
+        }
+    }
+
+    .content {
+        min-height: 100vh;
+        max-width: 28rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+</style>
+<script>
+    jQuery(document).ready(function ($) {
+
+        $('a.scroll-link').click(function (e) {
+            e.preventDefault();
+            $id = $(this).attr('href');
+            $('body,html').animate({
+                scrollTop: $($id).offset().top - 20
+            }, 750);
+        });
+
+    });
+</script>
+<nav id="Travbar" class="navbar navbar-dark bg-dark navbar-expand-md py-0 fixed-top">
+    <a class="navbar-brand" href="/">Travbar</a>
+    <button class="navbar-toggler active" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active navlinks" href="/home">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active navlinks" href="/aboutme">About Me <span
+                    class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active navlinks" href="/dogs">Dogs</a>
+            <a class="nav-item nav-link active navlinks" href="/apps">Apps</a>
+            <a class="nav-item nav-link active navlinks" href="/things">Things</a>
+            <a class="nav-link dropdown-toggle active navlinks" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Contact
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="contact">
+                <a class="dropdown-item navlinks" href="https://www.linkedin.com/in/travis-rivers-15508620/"><i
+                        class="fab fa-linkedin"></i>
+                    LinkedIn</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item navlinks" href="https://github.com/trivers88"><i
+                        class="fab fa-github"></i>Github</a>
             </div>
         </div>
-        <div class="row align-items-center">
-                <div class="col-lg-6 col-sm-12 mt-5">
-                        <img class="img-fluid" src="/static/f2w.jpg" alt="">
-                    </div>
-                <div class="col-lg-6 col-sm-12">
-                    <div class="text-white text-center d-none d-lg-block mt-5 mr-5">
-                        <h2>Outside of being a nerd, I enjoy competing in Jiu-Jitsu </h2>
-                        
-                    </div>
-                </div>
-              
+    </div>
+</nav>
+<div class="parallax"></div>
+
+<section class="container-fluid px-0">
+    <a class="scroll-link" href="#content">
+        <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
+            <g fill="none" fill-rule="evenodd">
+                <rect width="70" height="118" x="1.5" y="1.5" stroke="#FFF" stroke-width="3" rx="36" />
+                <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#FFF" />
+            </g>
+        </svg>
+    </a>
+    <div class="row align-items-center">
+        <div class="col-lg-6 col-sm-12">
+            <div class="text-white text-center d-lg-block mt-5">
+                <h1 class="text-white">About Me</h1>
+                <h2>My name is Travis Rivers and I live in Denver with my fianc&eacutee and two pups. We moved here 3
+                    1/2 years ago from Rochester, NY after just one visit
+                    because we fell in love with Colorado. I've spent my career working in talent acquistion, primarily
+                    for healthcare entities. Recently, I decided to learn how to program and I've been surprised by how
+                    much I enjoy it.
+                    I've always embraced things that are challenging and I love learning. With programming, I get both
+                    of those things. </h2>
+
             </div>
-            <div class="row align-items-center">
-                    <div class="col-lg-6 col-sm-12">
-                            <div class="text-white text-center d-none d-lg-block mt-5">
-                                <h2>Hiking </h2>
-                                
-                            </div>
-                        </div>
-                    <div class="col-lg-6 col-sm-12 mt-5">
-                            <img class="img-fluid" src="/static/princeton.jpg" alt="">
-                        </div>
-                   
-                  
-                </div>
-                <div class="row align-items-center">
-                        <div class="col-lg-6 col-sm-12 mt-5">
-                                <img class="img-fluid" src="/static/lighthouse.jpg" alt="">
-                            </div>
-                        <div class="col-lg-6 col-sm-12">
-                            <div class="text-white text-center d-none d-lg-block mt-5">
-                                <h2>And traveling </h2>
-                                
-                            </div>
-                        </div>
-                      
-                    </div>
-    </section>
+        </div>
+        <div class="col-lg-6 col-sm-12 mt-5">
+            <img class="img-fluid " src="/static/profesh.jfif" alt="">
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col-lg-6 col-sm-12 mt-5">
+            <img class="img-fluid" src="/static/f2w.jpg" alt="">
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <div class="text-white text-center d-none d-lg-block mt-5 mr-5">
+                <h2>Outside of being a nerd, I enjoy competing in Jiu-Jitsu </h2>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="row align-items-center">
+        <div class="col-lg-6 col-sm-12">
+            <div class="text-white text-center d-none d-lg-block mt-5">
+                <h2>Hiking </h2>
+
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 mt-5">
+            <img class="img-fluid" src="/static/princeton.jpg" alt="">
+        </div>
+
+
+    </div>
+    <div class="row align-items-center">
+        <div class="col-lg-6 col-sm-12 mt-5">
+            <img class="img-fluid" src="/static/lighthouse.jpg" alt="">
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <div class="text-white text-center d-lg-block mt-5">
+                <h2>And traveling </h2>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<div class="parallax"></div>
 
 {% endblock %}
-
-   

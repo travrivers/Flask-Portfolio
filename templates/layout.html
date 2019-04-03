@@ -13,32 +13,7 @@
     <link rel="stylesheet" type="text/css" href="/static/style.css">
     <title>Trav's Site</title>
 </head>
-
 <body>
-    <nav id="Travbar" class="navbar navbar-dark bg-dark navbar-expand-md py-0 fixed-top">
-        <a class="navbar-brand" href="/">Travbar</a>
-        <button class="navbar-toggler active" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="/aboutme">About Me <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link active" href="/dogs">Dogs</a>
-                <a class="nav-item nav-link active" href="/apps">Apps</a>
-                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Contact
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="contact">
-                    <a class="dropdown-item" href="https://www.linkedin.com/in/travis-rivers-15508620/"><i class="fab fa-linkedin"></i>
-                        LinkedIn</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="https://github.com/trivers88"><i class="fab fa-github"></i>Github</a>
-                </div>
-            </div>
-        </div>
-    </nav>
     {% block body %}{% endblock %}
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

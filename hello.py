@@ -3,9 +3,11 @@ from flask import render_template
 
 app = Flask(__name__)
 
-app.debug = True
-
 @app.route('/')
+def landing():
+    return render_template('landing.html')
+
+@app.route('/home')
 def home():
     return render_template('hello.html')
 
@@ -16,6 +18,10 @@ def aboutme():
 @app.route('/dogs')
 def dogs():
     return render_template('dogs.html')
+
+@app.route('/things')
+def things():
+    return render_template('things.html')
 
 @app.route('/apps')
 def games():
@@ -33,4 +39,5 @@ def circles():
 def fancytodo():
     return render_template('fancytodo.html')
 
-
+if __name__ == '__main__':
+    app.run(debug=True) 

@@ -2,37 +2,56 @@
 
 {% block body %}
 
+<style>
+    .navlinks:hover {
+        background-color: red;
+        color: black;
+    }
+</style>
+<nav id="Travbar" class="navbar navbar-dark bg-dark navbar-expand-md py-0 fixed-top">
+    <a class="navbar-brand" href="/">Travbar</a>
+    <button class="navbar-toggler active" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active navlinks" href="/home">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active navlinks" href="/aboutme">About Me <span
+                    class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active navlinks" href="/dogs">Dogs</a>
+            <a class="nav-item nav-link active navlinks" href="/apps">Apps</a>
+            <a class="nav-item nav-link active navlinks" href="/things">Things</a>
+            <a class="nav-link dropdown-toggle active navlinks" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Contact
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="contact">
+                <a class="dropdown-item navlinks" href="https://www.linkedin.com/in/travis-rivers-15508620/"><i
+                        class="fab fa-linkedin"></i>
+                    LinkedIn</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item navlinks" href="https://github.com/trivers88"><i
+                        class="fab fa-github"></i>Github</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
 <div class="container-fluid pt-5">
-  <div class="card-deck">
+    <div class="card-deck">
 
         <div class="card text-white text-center bg-dark mb-3" style="max-width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Color Guessing Game</h5>
-              <p class="card-text">A game where you guess a color based upon RGB values</p>
-              <a href="/colorguesser" class="btn btn-danger">Go</a>
+                <h5 class="card-title">DogParker</h5>
+                <p class="card-text">A full stack (MongoDB, Express, Node.js) application. Basically, it's Yelp for
+                    Dog Parks</p>
+                <a href="http://dogparker.herokuapp.com/" class="btn btn-danger">Go</a>
             </div>
-          </div>
-    
-        <div class="card text-white text-center bg-dark mb-3" style="max-width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Circles</h5>
-              <p class="card-text">A game that turns your keyboard into an instrument, heavily inspired by Patatap</p>
-              <a href="/circles" class="btn btn-danger">Go</a>
-            </div>
-          </div>
-
-        <div class="card text-white text-center bg-dark mb-3" style="max-width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Fancy To-Do List</h5>
-              <p class="card-text">It's a to-do list...but fancy. Add, mark as complete, and remove items</p>
-              <a href="/fancytodo" class="btn btn-danger">Go</a>
-            </div>
-          </div>
-  </div>
-    
-</div>
+        </div>
 
 
+    </div>
 
-
-{% endblock %}
+    {% endblock %}
